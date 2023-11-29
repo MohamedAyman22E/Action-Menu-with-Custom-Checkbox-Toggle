@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/pro.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="contaner">
+      <h2>mohamed ayman</h2>
+      <h5>creative design</h5>
+      <hr />
+      <ul class="menu">
+        <li>
+          <label for="">
+            <span class="title">
+              <div class="ion-icon"><i class="fa-solid fa-wifi"></i></div>
+              wi-fi</span
+            >
+            <span class="action">
+              <input type="checkbox" />
+              <i></i>
+            </span>
+          </label>
+        </li>
+        <li>
+          <label for="">
+            <span class="title"
+              ><div class="ion-icon">
+                <i class="fa-brands fa-bluetooth-b"></i>
+              </div>
+              bluetooth</span
+            >
+            <span class="action">
+              <input type="checkbox" />
+              <i></i>
+            </span>
+          </label>
+        </li>
+        <li>
+          <label for="">
+            <span class="title"
+              ><div class="ion-icon"><i class="fa-solid fa-plane"></i></div>
+              airport plane</span
+            >
+            <span class="action">
+              <input type="checkbox" />
+              <i></i>
+            </span>
+          </label>
+        </li>
+        <li>
+          <label for="">
+            <span class="title"
+              ><div class="ion-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              location</span
+            >
+            <span class="action">
+              <input type="checkbox" />
+              <i></i>
+            </span>
+          </label>
+        </li>
+        <li>
+          <label for="">
+            <span class="title"
+              ><div class="ion-icon"><i class="fa-solid fa-moon"></i></div>
+              dark mode</span
+            >
+            <span class="action">
+              <input type="checkbox" />
+              <i class="darkMode"></i>
+            </span>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      let icon = document.querySelectorAll(".action i");
+      let darkMode = document.querySelector(".action .darkMode");
+      let body = document.querySelector("body");
+
+      icon.forEach(e => {
+        e.addEventListener("click", () => {
+          e.classList.toggle("active");
+        });
+      });
+
+      darkMode.addEventListener("click", () => {
+        body.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

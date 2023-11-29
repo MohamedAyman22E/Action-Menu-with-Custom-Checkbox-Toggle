@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  user-select: none;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  transition: 0.3s;
+}
+body.active {
+  background-color: #222;
+}
+.contaner {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-family: sans-serif;
+  transition: 0.3s;
+}
+body.active .contaner {
+  background-color: #262626;
+}
+.contaner h2 {
+  transition: 0.5s;
+}
+
+body.active h2 {
+  color: #f0f0f0;
+}
+.contaner h5 {
+  margin: 5px 0 15px 0;
+  transition: 0.5s;
+}
+body.active h5 {
+  color: #f0f0f0;
+}
+
+.menu {
+  margin-top: 10px;
+}
+
+.menu li label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.menu li label span {
+  color: #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu li label .action input {
+  appearance: none;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+}
+.menu li label .action i {
+  width: 30px;
+  height: 15px;
+  background-color: #ddd;
+  border-radius: 10px;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.menu li label .action i.active {
+  background-color: #2aa0ff;
+}
+.menu li label .action {
+  position: relative;
+}
+.menu li label .action i::before {
+  content: "";
+  position: absolute;
+  left: 2.5px;
+  top: 2.5px;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+.menu li label .action i.active::before {
+  left: calc(100% - 12.5px);
+}
